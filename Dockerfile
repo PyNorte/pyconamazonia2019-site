@@ -1,12 +1,18 @@
-FROM python
+FROM python:3.7.3
 
 # Install base dependencies for setup and dev runtime
-RUN apt-get -q update && apt-get -q install -y libxml2-dev libxslt1-dev python-dev python-virtualenv
+RUN apt -q update
+RUN apt -qy install -y \
+        libxml2-dev libxslt1-dev \
+        python-dev python-virtualenv \
+        curl software-properties-common \
+        ruby-full rubygems autogen autoconf libtool make
 
-RUN apt-get -q update && apt-get -q install -y nodejs npm
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt -q update && apt -q install -y nodejs npm
+
 RUN npm install gulp gulp-uglify gulp-concat gulp-sass &>> /dev/build.log
-
-RUN apt-get -q update && apt-get -q install -y rubygems
 RUN gem install -q sass
 
 
