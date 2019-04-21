@@ -3,13 +3,13 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'PyConAmazônia'
-SITENAME = u'PyCon Amazônia 2017'
+SITENAME = u'PyCon Amazônia 2019'
 SITEURL = '127.0.0.1'
-SITE_DESCRIPTION = "PyCon Amazônia 2017"
+SITE_DESCRIPTION = "PyCon Amazônia 2019"
 
 PATH = 'content'
 
-TIMEZONE = 'America/Manaus'
+TIMEZONE = 'America/Porto_Velho'
 THEME = "./theme"
 
 DEFAULT_LANG = u'pt'
