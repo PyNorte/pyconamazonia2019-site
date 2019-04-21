@@ -9,7 +9,7 @@ cache:
 
 before_install:
 - rvm install 2.4.1
-- openssl aes-256-cbc -K $encrypted_234e224a6ebe_key -iv $encrypted_234e224a6ebe_iv -in publish-key.enc -out ~/.ssh/publish-key -d
+- openssl aes-256-cbc -K $encrypted_04cec03ab04c_key -iv $encrypted_04cec03ab04c_iv -in publish-key.enc -out ~/.ssh/publish-key -d
 - chmod u=rw,og= ~/.ssh/publish-key
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
