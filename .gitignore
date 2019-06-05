@@ -5,5 +5,4 @@ node_modules/
 .sass-cache/
 pelican-plugins
 .idea
-.idea/
-
+/package-lock.json
